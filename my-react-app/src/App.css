@@ -55,7 +55,10 @@ main {
   padding: 36px;
 }
 .meme--image {
-  max-width: 100%;
+  max-width: 92%;
+  display: flex;
+  justify-content: center; /* add this line */
+  margin: 0 auto;
 }
 .meme--text {
   position: absolute;
@@ -76,9 +79,27 @@ main {
 }
 
 .bottom {
-  bottom: 0;
+  bottom: -15px;
 }
 
 .top {
-  top: 230px;
+  top: -15px;
+}
+.meme {
+  position: relative;
+}
+.meme--text {
+  position: absolute; /* add this line */
+}
+@media (max-width: 768px) {
+  /* tablet and mobile devices */
+  main {
+    padding: 8px; /* reduce padding for smaller screens */
+  }
+  .form--input {
+    font-size: 1.2rem;
+  }
+  .meme--text {
+    font-size: 1.2rem;
+  }
 }
